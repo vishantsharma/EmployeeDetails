@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "node node_modules/webpack/bin/webpack.js",
     "serve": "node node_modules/webpack-dev-server/bin/webpack-dev-server.js --content-base client --inline --hot",
-    "start": "node server.js"
+    "start": "node server.js",
+    "message": "node warning.js"
   },
   "keywords": [
     "details"
@@ -30,5 +31,11 @@
     "webpack-dev-middleware": "^1.8.4",
     "webpack-dev-server": "^1.16.2",
     "webpack-hot-middleware": "^2.13.2"
-  }
+  },
+  "devDependencies": {
+    "pre-push": "^0.1.1"
+  },
+  "pre-push": [
+    "message"
+  ]
 }
